@@ -1,0 +1,48 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link type="text/css" rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    </head>
+    <body>
+        <div class='container'>
+            <div class='overlay'></div>
+            <div id="welcome-login">
+                {% if user.is_authenticated %}
+                <p>Welcome, {{ user.username }}!</p>
+                {% else %}
+                <a href="{% provider_login_url 'google' %}">Login with Google</a>
+                {% endif %}
+            </div>
+            <div class='cube'>
+                <svg id='btop' viewBox="0 0 141 75"><defs><style>.cls-1{stroke:#fff;stroke-miterlimit:10;}</style>
+                    </defs>
+                        <path class="cls-1" d="M140.86,19.53c-6.84,5.81-31.23,25.12-68,26-39,.93-65.4-19.56-72-25Q.89,34.25.91,48c6.6,5.45,33,25.93,72,25,36.77-.87,61.17-20.18,68-26Z"/>
+                        <path class="cls-1" d="M69.86.53a139,139,0,0,0-69,20c6.39,5.33,32.34,25.74,71,25,37.87-.77,62.65-21.35,69-27A139.12,139.12,0,0,0,69.86.53Z"/>
+                </svg>
+                <svg id="b1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141 59"><defs><style>.cls-1{stroke:#fff;stroke-miterlimit:10;}</style></defs>
+                    <path class="cls-1" d="M140.55,31.13c-6.83,5.82-31.23,25.13-68,26-39,.93-65.4-19.55-72-25Q.54,18.41.5,4.68c6.6,5.45,33,25.93,72,25,36.77-.87,61.17-20.18,68-26Z"/>
+                </svg>
+                <svg id="b2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141 59">
+                    <defs><style>.cls-1{stroke:#fff;stroke-miterlimit:10;}</style></defs>
+                    <path class="cls-1" d="M140.55,31.13c-6.83,5.82-31.23,25.13-68,26-39,.93-65.4-19.55-72-25Q.54,18.41.5,4.68c6.6,5.45,33,25.93,72,25,36.77-.87,61.17-20.18,68-26Z"/>
+                </svg>
+                <svg id="b3" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141 59">
+                    <defs><style>.cls-1{stroke:#fff;stroke-miterlimit:10;}</style></defs>
+                    <path class="cls-1" d="M140.55,31.13c-6.83,5.82-31.23,25.13-68,26-39,.93-65.4-19.55-72-25Q.54,18.41.5,4.68c6.6,5.45,33,25.93,72,25,36.77-.87,61.17-20.18,68-26Z"/>
+                </svg>
+                <a id='opt-1' href=''>Browse</a>
+                <a id='opt-2' href=''>Search</a>
+                <a id='opt-3' href=''>Submit</a>
+                <a id='opt-4' href=''>About</a>
+            </div>  
+            <div id='det-container'>
+                dd
+                <br>
+                <br>
+                
+            </div>
+        </div>
+    </body>
+</html>
