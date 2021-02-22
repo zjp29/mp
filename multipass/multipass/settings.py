@@ -43,12 +43,10 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    'gtally',
     'myblog',
     'rest_framework',
     'django_filters',
     'gcms',
-    'taggit',
 ]
 
 SITE_ID = 2
@@ -122,8 +120,8 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'multipass',
         'USER': 'pass',
-        'PASSWORD': 'ASLKQWPO1111',
-        'HOST': 'localhost',
+        'PASSWORD': 'ASLKQWPO1111%',
+        'HOST': 'dr-735-op.postgres.database.azure.com',
         'PORT': '5432',
     }
 }
