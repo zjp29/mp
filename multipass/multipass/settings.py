@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.gis',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -117,9 +116,9 @@ TAGGIT_CASE_INSENSITIVE = True
 
 DATABASES = {
     'default' : {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'multipass',
-        'USER': 'pass',
+        'USER': 'pass@dr-735-op',
         'PASSWORD': 'ASLKQWPO1111%',
         'HOST': 'dr-735-op.postgres.database.azure.com',
         'PORT': '5432',

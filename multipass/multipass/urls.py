@@ -16,15 +16,12 @@ Including another URLconf
 from django.urls import include
 from django.contrib import admin
 from django.urls import path
-import gtally.api_views
+
 #from gcms.views import HomeView
 
 urlpatterns = [
     path('', include('gcms.urls')),
     path('accounts/', include('allauth.urls')),
     path('api-auth/', include('rest_framework.urls')),
-    path('api/tally/list', gtally.api_views.TallyList.as_view()),
-    path('api/tally/new', gtally.api_views.TallyCreate.as_view()),
-    #path('', HomeView.as_view(), name="home"),
     path('admin/', admin.site.urls),
 ]

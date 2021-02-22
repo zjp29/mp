@@ -1,5 +1,5 @@
 from django.db import models
-from taggit.managers import TaggableManager
+
 
 # Create your models here.
 
@@ -10,7 +10,6 @@ class Dataset(models.Model):
     renewal = models.DateField()
     summary = models.TextField(max_length = 300)
     detail = models.TextField()
-    tags = TaggableManager()
     f = models.FileField()
     def __str__(self):
         return self.title

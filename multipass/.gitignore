@@ -1,2 +1,6 @@
 multipass-env/
-mp-env\
+mp-env/
+multipass-env/
+__pycache__/
+mp-env/
+migrations/
