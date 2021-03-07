@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['multipass-app.azurewebsites.net','127.0.0.1:8000']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 
 
 # Application definition
@@ -121,7 +121,6 @@ WSGI_APPLICATION = 'multipass.wsgi.application'
 TAGGIT_CASE_INSENSITIVE = True
 
 # Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
     'default' : {
