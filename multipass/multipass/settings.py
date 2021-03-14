@@ -97,11 +97,16 @@ AUTHENTICATION_BACKENDS = [
     
 ]
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_PERMISSION_CLASSES': (
-#         'gcms.permissions.DisableOptionsPermission',
-#     )
-# }
+SECURE_SSL_REDIRECT=True
+SESSION_COOKIE_SECURE=True
+CSRF_COOKIE_SECURE=True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_SECONDS=31536000
+SECURE_HSTS_PRELOAD= True
+SECURE_REFERRER_POLICY="strict-origin"
+USE_X_FORWARDED_HOST=True
+
+
 
 LOGIN_REDIRECT_URL = '/'
 
@@ -172,6 +177,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,"static_")
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"static"),
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR,"media")
