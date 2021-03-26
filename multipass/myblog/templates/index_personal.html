@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <link type="text/css" rel="stylesheet" href="{% static 'CSS/personal_style.css' %}">
+        <meta charset="UTF-8">
+        <meta name="description" content="Zach Porteous">
+        <meta name="keywords" content="GIS, Geospatial,Humboldt,Cartography, Web Development">
+        <meta name="author" content="Zach Porteous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <div id="overlay"></div>
+            <div class="landing" id="landing">
+                    <img src="{% static 'images/IMG954906.jpg' %}" id="profile_pic">
+                <div class="header-div">
+                        <div id="header-text">
+                            <h1> Zachery Joseph Porteous</h1>
+                            <h4>
+                                GIS Research Assistant at HSU's Cultural Resource Facility<Br><Br>
+                                GIS Intern at the National Park Service <br><Br>
+                                
+                            </h4>
+                            
+                            <div id='nav_con'>
+                                <div id='nav1'>Menu</div>
+                                <div id='nav2'><a href="#about">About</a></div>
+                                <div id='nav3'><a href="#projects">Projects</a></div>
+                                <div id='nav4'><a href="#workexp">Skills</a></div>
+                                <div id='nav5'><a href="#maps">Maps</a></div>
+                                <div id='nav6'><Br>^</div>
+                                    
+                            </div>
+                            <div>
+                            <a href="https://www.instagram.com/zizzlepo/"><img src="{% static 'images/insta.png' %}" id="brands"></a>
+                            <a href="https://www.linkedin.com/in/zachporteous"><img src="{% static 'images/in.png' %}" id="brands"></a>
+                            </div>
+                        </div>  
+                </div>
+                <div>
+                    <!--<img src="images/arrow.png" id="arrow">-->
+                </div> 
+            </div>
+            <div id="about">
+                <div class="banner">
+                    <h2>About Me</h2>
+                </div>
+                <div class="p1">
+                    <p>
+                        <h4>Greetings!</h4> I'm Zach, welcome to my site. For the past two years I've been studying at
+                        Humboldt State University as an Environmental Science and Management Major with a Minor in 
+                        Computer Science. While I haven't particularly been enjoying the Environmental Science portion 
+                        of my major, I've fallen in love with Geospatial Science and everything that comes with it: 
+                        satellite imagery, land and resource management, spatial analysis, cartography and of course
+                        all the coding! If someone had asked me five years ago where I would be now, being a programmer
+                        would've been pretty far down on the list. I've come a long way from my humble C++ beginnings and
+                        can't wait to apply what I've learned to a career I can be proud of.<br><br>
+                        <a href="{% static 'ZachPorteousResume.pdf' %}">Resume</a>
+                    </p>
+                </div>
+                <div class="p2">
+                    <h4>Things I enjoy:</h4>
+                    <ul>
+                        <li>Maps!</li>
+                        <li>Coding!</li>
+                        <li>Exclamations!</li>
+                        <li>Drumming!</li>
+                        <li>Sci-Fi and Fantasy!</li>
+                    </ul>
+                </div>
+            </div><br><Br>
+
+
+            <!-- Slideshow container -->
+            <div id="maps"></div>
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 7</div>
+                <img src="{% static 'images/test.png' %}" style="width:100%">
+                <div class="text"></div>
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 7</div>
+                <img src="{% static 'images/bass-01.png' %}" style="width:100%">
+                <div class="text"></div>
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 7</div>
+                <img src="{% static 'images/Terrainweb.png' %}" style="width:100%">
+                <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">4 / 7</div>
+                <img src="images/fianl.png" style="width:100%">
+                <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">5 / 7</div>
+                <img src="images/madelyne.png" style="width:100%">
+                <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">6 / 7</div>
+                <img src="images/finalfinal.png" style="width:100%">
+                <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">7 / 7</div>
+                <img src="images/finalmosul.png" style="width:100%">
+                <div class="text"></div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+            </div><Br>
+
+                <script>
+                        var slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        // Next/previous controls
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        // Thumbnail image controls
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          var i;
+                          var slides = document.getElementsByClassName("mySlides");
+                          var dots = document.getElementsByClassName("dot");
+                          if (n > slides.length) {slideIndex = 1}
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                              slides[i].style.display = "none";
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                              dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";
+                          dots[slideIndex-1].className += " active";
+                        }
+                </script>
+
+            <div id="projects">
+                    <h1 style="text-align:center;color:lightgrey;"><u>Projects</u></h1>
+                <!--<div id="P1_button"><h2>Becoming an NHD Editor</h2></div>-->
+                <div id="proj1">
+                    <img src="./images/NHD.PNG">
+                    <div id="proj1-desc">
+                        <h3>Becoming a Certified NHD Editor</h3>
+                        <p>In Spring 2019
+                            I landed an internship at the National Park Service under the GIS coordinator
+                            Dave Best. Our task was to clean up a stream layer that was derived from 
+                            LiDAR and a flow-accumulation model. When the remote sensing vendor 
+                            delivered the product it was clear that it was not going to be immediately
+                            useful; we needed to sort through all of the excess lines. When that menial 
+                            task was completed Dave decided it would be great to input the data into the 
+                            National Hydrography Dataset. A couple months and a few trainings later I'm 
+                            officially allowed to input data into the NHD!
+                        </p>
+                    </div>
+                </div>
+                <!--<div id="P2_button"><h2>Python LandSat 8 Image Manipulation</h2></div>-->
+                <div id="proj2">
+                    <img src="./images/tdvi_thumbnail.PNG">
+                    <div id="proj2-desc">
+                            <h3>Using Python to Process LS 8 images</h3>
+                            <p>
+                                Using the image manipulation module Rasterio I wrote a script
+                                that took a decompressed LS 8 level 1 data packet, radiometrically 
+                                corrected it and brought it to top-of-atmosphere reflectance. Me and my partner then did some raster math using the different bands
+                                to create Vegetation indices automatically. We used the QT GUI module to 
+                                create an easy to use interface. Learning how to combine various Python 
+                                packages and manipulate images as arrays was incredibly rewarding and pretty
+                                much solidified python as my favorite data processing language.<br>Looking back on this code months
+                                later was an interesting experience; now that I've gotten better at using Python 
+                                I realised I should have done so many things differently... Click <a href="https://github.com/zjp29/Landsat8_Python">here</a> 
+                                to view the code on my Github.
+                            </p>
+                    </div>
+                </div>
+                <!--<div id="P3_button"><h2>Cultural Resources Facility Geodatabase</h2></div>-->
+                <div id="proj3">
+                    <img src="./images/MA.png">
+                    <div id="proj3-desc">
+                            <h3>Building Out a Geodatabase</h3>
+                            <p>
+                                Just recently I was hired as a Research Assistant at HSU's Cultural Resource Facility to
+                                help the GIS people there organize decades of survey data. Their 
+                                final goal is to mimic the Northwest Information Center's schema so that data can be
+                                more easily interchanged between various organizations that the CRF works with. As of
+                                now we are doing the grunt work of collecting all the legacy data and making a shell
+                                database in Microsoft Access.  
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div id="workexp">
+                <div class="col3"><Br>
+                            <img id="gif" src="images/final.gif"> 
+                            <p>
+                            </p>
+                </div>
+                <div class="col4">
+                            <p><h3>California Groundwater Ambient <br>Monitoring and Assessment Program</h3><Br>
+                                I had never made a map gif before so I figured I'd start with something fun...
+                                The way that groundwater is tested and estimated has always interested me. So I
+                                visited the CA Open Data Portal and downloaded the most 
+                                recent GAMA dataset that the California Water Resources Board had. I extracted
+                                from the dataset the samples of Uranium, Arsenic, and Nitrate that exceeded the EPA's 
+                                recommended safe levels and presented them as symbols on this map gif;
+                                the size of the circle on the map is representative of the sample size.<Br><br>
+                                The samples were not taken at the same wells every year which is unfortunate but this simple gif
+                                can help visualize ground-water quality trends around the state. Click <a href="https://www.waterboards.ca.gov/gama/"><u>here</u></a> to learn more about the 
+                                GAMA program.
+                            </p>
+                </div>
+                <div class="col1"><h1><u>Skills</u></h1>
+                    <h2>Geospatial Analysis</h2>
+                    <ul>
+                        <li>
+                            Extensive experience with the ArcGIS suite of software:
+                                <ul>
+                                    <li>ArcPro</li>
+                                    <li>ArcMap</li>
+                                    <li>ArcSDE</li>
+                                    <li>ArcGIS Online</li>
+                                </ul>
+                        </li><br>
+                        <li>
+                            Knowledge of and continuing practice 
+                            of cartographic principles
+                        </li><br>
+                        <li>
+                            Image classification with ENVI and Raster 
+                            manipulation both with Python (Numpy, Rasterio)
+                            and ArcGIS
+                        </li><br>
+                        <li>
+                            Experience with managing and working in a enterprise
+                            geodatabase environment in SDE, SQL Server, and Microsoft
+                            Access
+                        </li><br>
+                        <li>
+                            Web mapping using ArcGIS and Open Source software
+                        </li>
+                    </ul>
+                </div>
+                <div class="col2"><br><br><br>
+                    <h2>Computer Science</h2>
+                    <ul>
+                        <li>
+                            Working knowledge of several object oriented languages here listed in 
+                            in order of how much time I've spent on them:
+                            <ul>
+                                <li>
+                                    Python
+                                </li>
+                                <li>
+                                    HTML5 CSS3 (This site was built from scratch)
+                                </li>
+                                <li>
+                                    Javascript
+                                </li>
+                                <li>
+                                    SQL+PL/SQL 
+                                </li>
+                                <li>
+                                    PHP
+                                </li>
+                                <li>
+                                    C++
+                                </li>
+                            </ul>
+                        </li><br>
+                        <li>
+                            Responsive Web Design 
+                        </li><br>
+                        <li>
+                            Relational database design and implementation
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer">
+                Copyright ZJP 2019<br>
+                Email: zjp29@humboldt.edu<br><br>
+                <img src="images/Logo-01.png">
+            </div>
+        </div>
+            <script type="text/javascript" src="js/expand_proj.js"></script>
+    </body>
+</html>
