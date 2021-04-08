@@ -97,25 +97,25 @@
 
                 <div class="mySlides fade">
                 <div class="numbertext">4 / 7</div>
-                <img src="images/fianl.png" style="width:100%">
+                <img src="{% static 'images/fianl.png' %}" style="width:100%">
                 <div class="text"></div>
                 </div>
 
                 <div class="mySlides fade">
                 <div class="numbertext">5 / 7</div>
-                <img src="images/madelyne.png" style="width:100%">
+                <img src="{% static 'images/madelyne.png' %}" style="width:100%">
                 <div class="text"></div>
                 </div>
 
                 <div class="mySlides fade">
                 <div class="numbertext">6 / 7</div>
-                <img src="images/finalfinal.png" style="width:100%">
+                <img src="{% static 'images/finalfinal.png' %}" style="width:100%">
                 <div class="text"></div>
                 </div>
 
                 <div class="mySlides fade">
                 <div class="numbertext">7 / 7</div>
-                <img src="images/finalmosul.png" style="width:100%">
+                <img src="{% static 'images/finalmosul.png' %}" style="width:100%">
                 <div class="text"></div>
                 </div>
             
@@ -171,7 +171,7 @@
                     <h1 style="text-align:center;color:lightgrey;"><u>Projects</u></h1>
                 <!--<div id="P1_button"><h2>Becoming an NHD Editor</h2></div>-->
                 <div id="proj1">
-                    <img src="./images/NHD.PNG">
+                    <img src="{% static '/images/NHD.PNG' %}">
                     <div id="proj1-desc">
                         <h3>Becoming a Certified NHD Editor</h3>
                         <p>In Spring 2019
@@ -188,7 +188,7 @@
                 </div>
                 <!--<div id="P2_button"><h2>Python LandSat 8 Image Manipulation</h2></div>-->
                 <div id="proj2">
-                    <img src="./images/tdvi_thumbnail.PNG">
+                    <img src="{% static '/images/tdvi_thumbnail.PNG' %}">
                     <div id="proj2-desc">
                             <h3>Using Python to Process LS 8 images</h3>
                             <p>
@@ -207,7 +207,7 @@
                 </div>
                 <!--<div id="P3_button"><h2>Cultural Resources Facility Geodatabase</h2></div>-->
                 <div id="proj3">
-                    <img src="./images/MA.png">
+                    <img src="{% static '/images/MA.png' %}">
                     <div id="proj3-desc">
                             <h3>Building Out a Geodatabase</h3>
                             <p>
@@ -223,7 +223,7 @@
             </div>
             <div id="workexp">
                 <div class="col3"><Br>
-                            <img id="gif" src="images/final.gif"> 
+                            <img id="gif" src="{% static 'images/final.gif' %}"> 
                             <p>
                             </p>
                 </div>
@@ -312,9 +312,9 @@
             <div class="footer">
                 Copyright ZJP 2019<br>
                 Email: zjp29@humboldt.edu<br><br>
-                <img src="images/Logo-01.png">
+                <img src="{% static 'images/Logo-01.png' %}">
             </div>
         </div>
-            <script type="text/javascript" src="js/expand_proj.js"></script>
+            <script type="text/javascript" src="{% static 'js/expand_proj.js' %}"></script>
     </body>
 </html>

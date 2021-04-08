@@ -4,3 +4,4 @@ multipass-env/
 __pycache__/
 mp-env/
 migrations/
+static/
