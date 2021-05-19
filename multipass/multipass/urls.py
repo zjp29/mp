@@ -24,7 +24,7 @@ from myblog.views import personal_view
 urlpatterns = [
     #path('', include('gcms.urls')),
     path('accounts/', include('allauth.urls')),
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('rest-auth/google/', GoogleLogin.as_view(), name='google_login'),
     path('old-personal', personal_view),
 ]
