@@ -8,9 +8,9 @@ from rest_framework import generics
 # Create your views here.
 
 
-class DSListCreate(generics.ListCreateAPIView):
-    queryset = Dataset.objects.all()
-    serializer_class = EntrySerializer
+# class DSListCreate(generics.ListCreateAPIView):
+#     queryset = Dataset.objects.all()
+#     serializer_class = EntrySerializer
 
 
 def personal_view(request):

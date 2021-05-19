@@ -7,5 +7,5 @@ from .views import personal_view
   
 urlpatterns = [
     path('blog', blog_view),
-    path('personal', personal_view),
+    path('', personal_view),
 ]

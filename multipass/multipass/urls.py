@@ -17,6 +17,7 @@ from django.urls import include
 from django.contrib import admin
 from django.urls import path
 from gcms.views import GoogleLogin
+from myblog.views import personal_view
 
 #from gcms.views import HomeView
 
@@ -25,5 +26,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
     path('rest-auth/google/', GoogleLogin.as_view(), name='google_login'),
-    path('', include('myblog.urls')),
+    path('old-personal', personal_view),
 ]
